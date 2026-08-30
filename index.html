@@ -1,0 +1,1381 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ustaad - Local Services</title>
+    <meta name="description" content="A responsive local service directory and booking platform with verified trade professionals and service cards." />
+    <meta property="og:title" content="Ustaad - Local Services" />
+    <meta property="og:description" content="A responsive local service directory and booking platform with verified trade professionals and service cards." />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@500;600;700&display=swap" rel="stylesheet" />
+
+    <!-- Stylesheet Link -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Top Navigation Bar -->
+    <header class="navbar-wrapper" id="top">
+      <div class="site-container">
+        <div class="nav-content">
+          <a href="#top" class="brand-logo" title="Ustaad Homepage">
+            <div class="brand-icon">U</div>
+            <div class="brand-title">
+              Ustaad
+              <span class="brand-tagline">Verified Local Pros</span>
+            </div>
+          </a>
+
+          <nav aria-label="Main Navigation">
+            <ul class="nav-links">
+              <li><a href="#categories" class="nav-link-item">Services</a></li>
+              <li><a href="#providers" class="nav-link-item">Find Pros</a></li>
+              <li><a href="#how-it-works" class="nav-link-item">How It Works</a></li>
+              <li><a href="#dashboard" class="nav-link-item">My Bookings</a></li>
+              <li><a href="#reviews" class="nav-link-item">Reviews</a></li>
+              <li><a href="#faq" class="nav-link-item">FAQ</a></li>
+            </ul>
+          </nav>
+
+          <div class="nav-actions">
+            <a href="#modal-login" class="btn btn-outline btn-sm" id="btnNavLogin">Sign In</a>
+            <a href="#modal-book-general" class="btn btn-amber btn-sm" id="btnNavBook">Book a Pro</a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <!-- Hero Section -->
+      <section class="hero-section" id="hero">
+        <div class="site-container">
+          <div class="hero-pill">
+            <span class="hero-pill-dot"></span>
+            40+ Verified Local Ustaads Available in Karachi
+          </div>
+
+          <h1 class="hero-title">
+            Book verified local technicians, <em>on call.</em>
+          </h1>
+
+          <p class="hero-subtitle">
+            Reliable electricians, plumbers, AC specialists, painters, and carpenters. Transparent rates, verified backgrounds, and same-day doorstep service.
+          </p>
+
+          <form class="search-box-container" action="#providers" method="get">
+            <div class="search-input-group">
+              <span style="font-size: 1.1rem; color: #94a3b8;">🔍</span>
+              <input
+                type="text"
+                name="q"
+                placeholder="Search by skill (e.g. Electrician, AC repair, Geyser)..."
+                aria-label="Search services or providers"
+              />
+            </div>
+
+            <div class="search-input-group">
+              <span style="font-size: 1.1rem; color: #94a3b8;">📍</span>
+              <select name="area" aria-label="Select Area">
+                <option value="">All Karachi Areas</option>
+                <option value="dha">DHA & Clifton</option>
+                <option value="gulshan">Gulshan-e-Iqbal</option>
+                <option value="pechs">PECHS & Bahadurabad</option>
+                <option value="nazimabad">North Nazimabad</option>
+                <option value="malir">Malir & Cantt</option>
+              </select>
+            </div>
+
+            <button type="submit" class="btn btn-amber btn-lg" id="heroSearchBtn">
+              Find Ustaad
+            </button>
+          </form>
+
+          <div class="chips-row">
+            <span style="font-size: 0.8125rem; font-weight: 700; color: #64748b; margin-right: 0.25rem;">Popular:</span>
+            <a href="#providers" class="chip-btn active">All Pros</a>
+            <a href="#cat-electrician" class="chip-btn">⚡ Electrician</a>
+            <a href="#cat-plumber" class="chip-btn">🔧 Plumber</a>
+            <a href="#cat-ac" class="chip-btn">❄️ AC Technician</a>
+            <a href="#cat-cleaning" class="chip-btn">✨ House Cleaning</a>
+            <a href="#cat-painter" class="chip-btn">🎨 Painter</a>
+            <a href="#cat-carpenter" class="chip-btn">🪚 Carpenter</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Featured Categories Section -->
+      <section class="section-wrapper" id="categories">
+        <div class="site-container">
+          <div class="section-head">
+            <div>
+              <h2 class="section-title">Explore Services</h2>
+              <p class="section-desc">Choose from verified specialized home and office trade categories.</p>
+            </div>
+            <a href="#providers" class="btn btn-outline btn-sm">View All Categories →</a>
+          </div>
+
+          <div class="category-grid">
+            <a href="#providers" class="card-hoverable category-card" id="cat-electrician">
+              <div class="category-card-img-wrapper">
+                <img
+                  src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&w=600&q=80"
+                  alt="Electrician Service"
+                  class="category-card-img"
+                  loading="lazy"
+                />
+              </div>
+              <div class="category-card-body">
+                <div class="category-card-icon icon-amber">⚡</div>
+                <div class="category-card-title">Electrician</div>
+                <div class="category-card-count">8 Verified Pros • From Rs 600</div>
+              </div>
+            </a>
+
+            <a href="#providers" class="card-hoverable category-card" id="cat-plumber">
+              <div class="category-card-img-wrapper">
+                <img
+                  src="https://images.unsplash.com/photo-1581244277943-fe4a9c777189?auto=format&fit=crop&w=600&q=80"
+                  alt="Plumbing Service"
+                  class="category-card-img"
+                  loading="lazy"
+                />
+              </div>
+              <div class="category-card-body">
+                <div class="category-card-icon icon-teal">🔧</div>
+                <div class="category-card-title">Plumbing & Geyser</div>
+                <div class="category-card-count">7 Verified Pros • From Rs 550</div>
+              </div>
+            </a>
+
+            <a href="#providers" class="card-hoverable category-card" id="cat-ac">
+              <div class="category-card-img-wrapper">
+                <img
+                  src="https://images.unsplash.com/photo-1621905252507-b35492cc74b4?auto=format&fit=crop&w=600&q=80"
+                  alt="AC Servicing and Repair"
+                  class="category-card-img"
+                  loading="lazy"
+                />
+              </div>
+              <div class="category-card-body">
+                <div class="category-card-icon icon-sky">❄️</div>
+                <div class="category-card-title">AC Servicing & Gas</div>
+                <div class="category-card-count">6 Verified Pros • From Rs 1,000</div>
+              </div>
+            </a>
+
+            <a href="#providers" class="card-hoverable category-card" id="cat-cleaning">
+              <div class="category-card-img-wrapper">
+                <img
+                  src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=600&q=80"
+                  alt="House Cleaning Service"
+                  class="category-card-img"
+                  loading="lazy"
+                />
+              </div>
+              <div class="category-card-body">
+                <div class="category-card-icon icon-emerald">✨</div>
+                <div class="category-card-title">Deep Cleaning</div>
+                <div class="category-card-count">5 Verified Pros • From Rs 1,200</div>
+              </div>
+            </a>
+
+            <a href="#providers" class="card-hoverable category-card" id="cat-painter">
+              <div class="category-card-img-wrapper">
+                <img
+                  src="https://images.unsplash.com/photo-1589939705384-5185137a7f0f?auto=format&fit=crop&w=600&q=80"
+                  alt="Painting and Waterproofing Service"
+                  class="category-card-img"
+                  loading="lazy"
+                />
+              </div>
+              <div class="category-card-body">
+                <div class="category-card-icon icon-rose">🎨</div>
+                <div class="category-card-title">Painting & Waterproof</div>
+                <div class="category-card-count">5 Verified Pros • From Rs 1,600</div>
+              </div>
+            </a>
+
+            <a href="#providers" class="card-hoverable category-card" id="cat-carpenter">
+              <div class="category-card-img-wrapper">
+                <img
+                  src="https://images.unsplash.com/photo-1504148455328-c376907d081c?auto=format&fit=crop&w=600&q=80"
+                  alt="Carpentry Service"
+                  class="category-card-img"
+                  loading="lazy"
+                />
+              </div>
+              <div class="category-card-body">
+                <div class="category-card-icon icon-indigo">🪚</div>
+                <div class="category-card-title">Carpentry & Locks</div>
+                <div class="category-card-count">5 Verified Pros • From Rs 800</div>
+              </div>
+            </a>
+
+            <a href="#providers" class="card-hoverable category-card" id="cat-pest">
+              <div class="category-card-img-wrapper">
+                <img
+                  src="https://images.unsplash.com/photo-1584820927498-cfe5211fd8bf?auto=format&fit=crop&w=600&q=80"
+                  alt="Pest Control Service"
+                  class="category-card-img"
+                  loading="lazy"
+                />
+              </div>
+              <div class="category-card-body">
+                <div class="category-card-icon icon-purple">🛡️</div>
+                <div class="category-card-title">Pest Control & Fumigation</div>
+                <div class="category-card-count">4 Verified Pros • From Rs 1,500</div>
+              </div>
+            </a>
+
+            <a href="#providers" class="card-hoverable category-card" id="cat-appliance">
+              <div class="category-card-img-wrapper">
+                <img
+                  src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=600&q=80"
+                  alt="Appliance Repair Service"
+                  class="category-card-img"
+                  loading="lazy"
+                />
+              </div>
+              <div class="category-card-body">
+                <div class="category-card-icon icon-blue">🔌</div>
+                <div class="category-card-title">Appliance Repair</div>
+                <div class="category-card-count">5 Verified Pros • From Rs 800</div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Verified Providers Directory -->
+      <section class="section-wrapper" id="providers" style="background-color: #f1f5f9; padding: 4rem 0;">
+        <div class="site-container">
+          <div class="section-head">
+            <div>
+              <h2 class="section-title">Verified Service Professionals</h2>
+              <p class="section-desc">Transparent pricing, verified government credentials, and live availability.</p>
+            </div>
+            <a href="#modal-register" class="btn btn-teal btn-sm">Join as an Ustaad Pro</a>
+          </div>
+
+          <div class="providers-grid">
+            <!-- Ahmed Raza -->
+            <div class="card-hoverable provider-card" id="pro-card-ahmed">
+              <div class="provider-card-cover">
+                <img
+                  src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&w=600&q=80"
+                  alt="Electrical repair work"
+                  class="provider-cover-img"
+                  loading="lazy"
+                />
+              </div>
+              <div class="provider-card-inner">
+                <div>
+                  <div class="provider-top">
+                    <div class="provider-avatar-badge">
+                      <img
+                        src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=200&h=200&crop=faces&q=80"
+                        alt="Ahmed Raza"
+                        class="provider-avatar-img"
+                      />
+                    </div>
+                    <span class="provider-status-badge status-available">
+                      <span class="status-dot"></span> Available Now
+                    </span>
+                  </div>
+                  <div class="provider-name">Ahmed Raza</div>
+                  <span class="provider-category-tag">⚡ Electrician</span>
+                  <div class="provider-meta">
+                    <div class="provider-meta-row">
+                      <span>📍</span>
+                      <span>DHA Phase 6 & Clifton, Karachi</span>
+                    </div>
+                    <div class="provider-meta-row">
+                      <span>🛠️</span>
+                      <span>6 Years Experience • CNIC Verified</span>
+                    </div>
+                  </div>
+                  <p class="provider-bio">
+                    Certified electrician handling wiring faults, distribution panel upgrades, breaker tripping fixes, and emergency call-outs.
+                  </p>
+                </div>
+                <div>
+                  <div class="provider-footer">
+                    <div>
+                      <div class="provider-price">Rs 800 <span>/visit</span></div>
+                      <div class="provider-rating">
+                        <span class="star-icon">★★★★★</span> 4.8 <span class="rating-count">(23 reviews)</span>
+                      </div>
+                    </div>
+                    <div style="display: flex; gap: 0.4rem;">
+                      <a href="#modal-profile-ahmed" class="btn btn-outline btn-sm">Profile</a>
+                      <a href="#modal-book-ahmed" class="btn btn-primary btn-sm">Book Now</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Bilal Khan -->
+            <div class="card-hoverable provider-card" id="pro-card-bilal">
+              <div class="provider-card-cover">
+                <img
+                  src="https://images.unsplash.com/photo-1585704032915-c3400ca199e7?auto=format&fit=crop&w=600&q=80"
+                  alt="Plumbing maintenance"
+                  class="provider-cover-img"
+                  loading="lazy"
+                />
+              </div>
+              <div class="provider-card-inner">
+                <div>
+                  <div class="provider-top">
+                    <div class="provider-avatar-badge" style="color: #0f766e; background: #ccfbf1;">
+                      <img
+                        src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=200&h=200&crop=faces&q=80"
+                        alt="Bilal Khan"
+                        class="provider-avatar-img"
+                      />
+                    </div>
+                    <span class="provider-status-badge status-available">
+                      <span class="status-dot"></span> Available Now
+                    </span>
+                  </div>
+                  <div class="provider-name">Bilal Khan</div>
+                  <span class="provider-category-tag" style="background-color: #ecfdf5; color: #047857; border-color: #a7f3d0;">🔧 Plumber</span>
+                  <div class="provider-meta">
+                    <div class="provider-meta-row">
+                      <span>📍</span>
+                      <span>Gulshan-e-Iqbal & Johar, Karachi</span>
+                    </div>
+                    <div class="provider-meta-row">
+                      <span>🛠️</span>
+                      <span>9 Years Experience • Certified Tech</span>
+                    </div>
+                  </div>
+                  <p class="provider-bio">
+                    Nine years fixing pipe leaks, sanitary fittings, gas/electric water heaters, and water motor lines with written estimates.
+                  </p>
+                </div>
+                <div>
+                  <div class="provider-footer">
+                    <div>
+                      <div class="provider-price">Rs 700 <span>/visit</span></div>
+                      <div class="provider-rating">
+                        <span class="star-icon">★★★★★</span> 4.9 <span class="rating-count">(41 reviews)</span>
+                      </div>
+                    </div>
+                    <div style="display: flex; gap: 0.4rem;">
+                      <a href="#modal-profile-bilal" class="btn btn-outline btn-sm">Profile</a>
+                      <a href="#modal-book-bilal" class="btn btn-primary btn-sm">Book Now</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Zara Sheikh -->
+            <div class="card-hoverable provider-card" id="pro-card-zara">
+              <div class="provider-card-cover">
+                <img
+                  src="https://images.unsplash.com/photo-1621905252507-b35492cc74b4?auto=format&fit=crop&w=600&q=80"
+                  alt="AC servicing and unit diagnostic"
+                  class="provider-cover-img"
+                  loading="lazy"
+                />
+              </div>
+              <div class="provider-card-inner">
+                <div>
+                  <div class="provider-top">
+                    <div class="provider-avatar-badge" style="color: #0369a1; background: #e0f2fe;">
+                      <img
+                        src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=200&h=200&crop=faces&q=80"
+                        alt="Zara Sheikh"
+                        class="provider-avatar-img"
+                      />
+                    </div>
+                    <span class="provider-status-badge status-available">
+                      <span class="status-dot"></span> Available Now
+                    </span>
+                  </div>
+                  <div class="provider-name">Zara Sheikh</div>
+                  <span class="provider-category-tag" style="background-color: #f0f9ff; color: #0284c7; border-color: #bae6fd;">❄️ AC Technician</span>
+                  <div class="provider-meta">
+                    <div class="provider-meta-row">
+                      <span>📍</span>
+                      <span>PECHS & Bahadurabad, Karachi</span>
+                    </div>
+                    <div class="provider-meta-row">
+                      <span>🛠️</span>
+                      <span>5 Years Experience • Inverter Specialist</span>
+                    </div>
+                  </div>
+                  <p class="provider-bio">
+                    Inverter AC specialist, master pressure wash cleaning, R410A gas refills, PCB troubleshooting, and split unit installations.
+                  </p>
+                </div>
+                <div>
+                  <div class="provider-footer">
+                    <div>
+                      <div class="provider-price">Rs 1,200 <span>/unit</span></div>
+                      <div class="provider-rating">
+                        <span class="star-icon">★★★★★</span> 4.9 <span class="rating-count">(52 reviews)</span>
+                      </div>
+                    </div>
+                    <div style="display: flex; gap: 0.4rem;">
+                      <a href="#modal-profile-zara" class="btn btn-outline btn-sm">Profile</a>
+                      <a href="#modal-book-zara" class="btn btn-primary btn-sm">Book Now</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Faisal Ahmed -->
+            <div class="card-hoverable provider-card" id="pro-card-faisal">
+              <div class="provider-card-cover">
+                <img
+                  src="https://images.unsplash.com/photo-1562259949-e8e7689d7828?auto=format&fit=crop&w=600&q=80"
+                  alt="Interior painting"
+                  class="provider-cover-img"
+                  loading="lazy"
+                />
+              </div>
+              <div class="provider-card-inner">
+                <div>
+                  <div class="provider-top">
+                    <div class="provider-avatar-badge" style="color: #be123c; background: #ffe4e6;">
+                      <img
+                        src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=200&h=200&crop=faces&q=80"
+                        alt="Faisal Ahmed"
+                        class="provider-avatar-img"
+                      />
+                    </div>
+                    <span class="provider-status-badge status-available">
+                      <span class="status-dot"></span> Available Now
+                    </span>
+                  </div>
+                  <div class="provider-name">Faisal Ahmed</div>
+                  <span class="provider-category-tag" style="background-color: #fff1f2; color: #e11d48; border-color: #fecdd3;">🎨 Painter</span>
+                  <div class="provider-meta">
+                    <div class="provider-meta-row">
+                      <span>📍</span>
+                      <span>North Nazimabad & Buffer Zone</span>
+                    </div>
+                    <div class="provider-meta-row">
+                      <span>🛠️</span>
+                      <span>8 Years Experience • Texture Expert</span>
+                    </div>
+                  </div>
+                  <p class="provider-bio">
+                    Interior & exterior weather-shield painting, wall putty preparation, texture finishes, and ceiling dampness waterproofing.
+                  </p>
+                </div>
+                <div>
+                  <div class="provider-footer">
+                    <div>
+                      <div class="provider-price">Rs 2,000 <span>/day</span></div>
+                      <div class="provider-rating">
+                        <span class="star-icon">★★★★★</span> 4.7 <span class="rating-count">(19 reviews)</span>
+                      </div>
+                    </div>
+                    <div style="display: flex; gap: 0.4rem;">
+                      <a href="#modal-profile-ahmed" class="btn btn-outline btn-sm">Profile</a>
+                      <a href="#modal-book-general" class="btn btn-primary btn-sm">Book Now</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Sana Malik -->
+            <div class="card-hoverable provider-card" id="pro-card-sana">
+              <div class="provider-card-cover">
+                <img
+                  src="https://images.unsplash.com/photo-1527515637462-cff94eecc1ac?auto=format&fit=crop&w=600&q=80"
+                  alt="House deep cleaning"
+                  class="provider-cover-img"
+                  loading="lazy"
+                />
+              </div>
+              <div class="provider-card-inner">
+                <div>
+                  <div class="provider-top">
+                    <div class="provider-avatar-badge" style="color: #047857; background: #d1fae5;">
+                      <img
+                        src="https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=200&h=200&crop=faces&q=80"
+                        alt="Sana Malik"
+                        class="provider-avatar-img"
+                      />
+                    </div>
+                    <span class="provider-status-badge status-busy">
+                      <span class="status-dot"></span> Booked Today
+                    </span>
+                  </div>
+                  <div class="provider-name">Sana Malik</div>
+                  <span class="provider-category-tag" style="background-color: #ecfdf5; color: #047857; border-color: #a7f3d0;">✨ House Cleaning</span>
+                  <div class="provider-meta">
+                    <div class="provider-meta-row">
+                      <span>📍</span>
+                      <span>Clifton & Defense Karachi</span>
+                    </div>
+                    <div class="provider-meta-row">
+                      <span>🛠️</span>
+                      <span>4 Years Experience • Eco-Friendly</span>
+                    </div>
+                  </div>
+                  <p class="provider-bio">
+                    Deep-cleaning specialist for flats and bungalows. Marble floor scrubbing, kitchen degreasing, and post-renovation cleans.
+                  </p>
+                </div>
+                <div>
+                  <div class="provider-footer">
+                    <div>
+                      <div class="provider-price">Rs 1,500 <span>/session</span></div>
+                      <div class="provider-rating">
+                        <span class="star-icon">★★★★★</span> 4.8 <span class="rating-count">(35 reviews)</span>
+                      </div>
+                    </div>
+                    <div style="display: flex; gap: 0.4rem;">
+                      <a href="#modal-profile-zara" class="btn btn-outline btn-sm">Profile</a>
+                      <a href="#modal-book-general" class="btn btn-primary btn-sm">Reserve</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Usman Tariq -->
+            <div class="card-hoverable provider-card" id="pro-card-usman">
+              <div class="provider-card-cover">
+                <img
+                  src="https://images.unsplash.com/photo-1538688525198-9b88f6f53126?auto=format&fit=crop&w=600&q=80"
+                  alt="Carpentry and woodwork"
+                  class="provider-cover-img"
+                  loading="lazy"
+                />
+              </div>
+              <div class="provider-card-inner">
+                <div>
+                  <div class="provider-top">
+                    <div class="provider-avatar-badge" style="color: #4338ca; background: #e0e7ff;">
+                      <img
+                        src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=200&h=200&crop=faces&q=80"
+                        alt="Usman Tariq"
+                        class="provider-avatar-img"
+                      />
+                    </div>
+                    <span class="provider-status-badge status-available">
+                      <span class="status-dot"></span> Available Now
+                    </span>
+                  </div>
+                  <div class="provider-name">Usman Tariq</div>
+                  <span class="provider-category-tag" style="background-color: #eef2ff; color: #4f46e5; border-color: #c7d2fe;">🪚 Carpenter</span>
+                  <div class="provider-meta">
+                    <div class="provider-meta-row">
+                      <span>📍</span>
+                      <span>Malir, Cantt & Airport Area</span>
+                    </div>
+                    <div class="provider-meta-row">
+                      <span>🛠️</span>
+                      <span>12 Years Experience • Master Craftsman</span>
+                    </div>
+                  </div>
+                  <p class="provider-bio">
+                    Custom furniture repairs, wardrobe hinge adjustments, hydraulic door closers, deadbolt installation, and wood restoration.
+                  </p>
+                </div>
+                <div>
+                  <div class="provider-footer">
+                    <div>
+                      <div class="provider-price">Rs 1,000 <span>/visit</span></div>
+                      <div class="provider-rating">
+                        <span class="star-icon">★★★★★</span> 4.6 <span class="rating-count">(28 reviews)</span>
+                      </div>
+                    </div>
+                    <div style="display: flex; gap: 0.4rem;">
+                      <a href="#modal-profile-bilal" class="btn btn-outline btn-sm">Profile</a>
+                      <a href="#modal-book-general" class="btn btn-primary btn-sm">Book Now</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- How It Works Section -->
+      <section class="section-wrapper" id="how-it-works">
+        <div class="site-container">
+          <div class="section-head" style="text-align: center; justify-content: center; flex-direction: column;">
+            <h2 class="section-title">How Ustaad Works</h2>
+            <p class="section-desc">Get top-rated trade pros at your doorstep in three straightforward steps.</p>
+          </div>
+
+          <div class="features-grid">
+            <div class="card-hoverable feature-card">
+              <div class="feature-number">1</div>
+              <h3 class="feature-title">Search & Choose</h3>
+              <p>Browse verified ustaads across Karachi. Check genuine customer reviews, fixed visit charges, and verified badges before selecting.</p>
+            </div>
+
+            <div class="card-hoverable feature-card">
+              <div class="feature-number">2</div>
+              <h3 class="feature-title">Book Instantly</h3>
+              <p>Pick your preferred date and time slot. Describe the task and provide your address. Receive a confirmed digital job ticket instantly.</p>
+            </div>
+
+            <div class="card-hoverable feature-card">
+              <div class="feature-number">3</div>
+              <h3 class="feature-title">Pay After Job Done</h3>
+              <p>The technician arrives on time, completes the task with genuine tools, and you only pay once you are 100% satisfied with the work.</p>
+            </div>
+          </div>
+
+          <!-- Trust Banner -->
+          <div class="trust-banner">
+            <div>
+              <h3 class="trust-title">The Ustaad Service Guarantee</h3>
+              <p class="trust-desc">
+                Every technician on our platform undergoes strict police background checks and practical trade competency evaluations. No hidden quotes or surprise charges.
+              </p>
+              <div style="display: flex; gap: 0.75rem; flex-wrap: wrap;">
+                <a href="#modal-book-general" class="btn btn-amber btn-lg">Book with Guarantee</a>
+                <a href="#faq" class="btn btn-outline btn-lg" style="background: transparent; color: #fff; border-color: rgba(255,255,255,0.3);">Learn Our Standards</a>
+              </div>
+            </div>
+
+            <div class="trust-stats">
+              <div class="trust-stat-card">
+                <div class="trust-stat-number">100%</div>
+                <div class="trust-stat-label">Verified Backgrounds</div>
+              </div>
+              <div class="trust-stat-card">
+                <div class="trust-stat-number">4.9 / 5</div>
+                <div class="trust-stat-label">Average Customer Score</div>
+              </div>
+              <div class="trust-stat-card">
+                <div class="trust-stat-number">45 Mins</div>
+                <div class="trust-stat-label">Average Response Time</div>
+              </div>
+              <div class="trust-stat-card">
+                <div class="trust-stat-number">7-Day</div>
+                <div class="trust-stat-label">Free Re-Service Warranty</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Customer Bookings Dashboard -->
+      <section class="section-wrapper" id="dashboard" style="background-color: #f8fafc; padding: 4rem 0;">
+        <div class="site-container">
+          <div class="section-head">
+            <div>
+              <h2 class="section-title">My Service Bookings</h2>
+              <p class="section-desc">Manage active orders, view digital work tickets, and check technician updates.</p>
+            </div>
+            <a href="#modal-book-general" class="btn btn-amber btn-sm">+ New Request</a>
+          </div>
+
+          <div class="dashboard-panel">
+            <div class="booking-ticket" id="ticket-bk78921">
+              <div class="ticket-header">
+                <div style="display: flex; align-items: center; gap: 0.75rem;">
+                  <span class="ticket-id">BK-78921-EL</span>
+                  <span style="font-weight: 700; color: #0f172a;">Distribution Breaker & LED Wiring</span>
+                </div>
+                <span class="provider-status-badge" style="background-color: #fef3c7; color: #b45309; border: 1px solid #fde68a;">
+                  ⚡ Confirmed & On The Way
+                </span>
+              </div>
+
+              <div class="ticket-grid">
+                <div>
+                  <div class="ticket-item-label">Assigned Ustaad</div>
+                  <div class="ticket-item-val">Ahmed Raza (Electrician)</div>
+                </div>
+                <div>
+                  <div class="ticket-item-label">Scheduled Date</div>
+                  <div class="ticket-item-val">Today at 03:30 PM</div>
+                </div>
+                <div>
+                  <div class="ticket-item-label">Service Area</div>
+                  <div class="ticket-item-val">Bungalow 42-B, DHA Phase 6</div>
+                </div>
+                <div>
+                  <div class="ticket-item-label">Est. Total</div>
+                  <div class="ticket-item-val">Rs 800 (Cash / Bank)</div>
+                </div>
+              </div>
+
+              <div style="display: flex; align-items: center; justify-content: space-between; border-top: 1px dashed #e2e8f0; padding-top: 0.75rem; flex-wrap: wrap; gap: 0.5rem;">
+                <span style="font-size: 0.8125rem; color: #64748b;">
+                  💬 Note: Main circuit tripping whenever master AC turns on.
+                </span>
+                <div style="display: flex; gap: 0.5rem;">
+                  <a href="#modal-profile-ahmed" class="btn btn-outline btn-sm">Call Technician</a>
+                  <a href="#modal-review" class="btn btn-teal btn-sm">Mark Complete</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="booking-ticket" style="border-left-color: #0d9488;" id="ticket-bk45102">
+              <div class="ticket-header">
+                <div style="display: flex; align-items: center; gap: 0.75rem;">
+                  <span class="ticket-id" style="background-color: #0f766e; color: #ccfbf1;">BK-45102-PL</span>
+                  <span style="font-weight: 700; color: #0f172a;">Bathroom Mixer & Leakage Fix</span>
+                </div>
+                <span class="provider-status-badge status-available">
+                  ✓ Job Completed
+                </span>
+              </div>
+
+              <div class="ticket-grid">
+                <div>
+                  <div class="ticket-item-label">Assigned Ustaad</div>
+                  <div class="ticket-item-val">Bilal Khan (Plumber)</div>
+                </div>
+                <div>
+                  <div class="ticket-item-label">Completed On</div>
+                  <div class="ticket-item-val">Yesterday, 11:00 AM</div>
+                </div>
+                <div>
+                  <div class="ticket-item-label">Location</div>
+                  <div class="ticket-item-val">Gulshan Block 13-D</div>
+                </div>
+                <div>
+                  <div class="ticket-item-label">Paid Amount</div>
+                  <div class="ticket-item-val">Rs 700 (Completed)</div>
+                </div>
+              </div>
+
+              <div style="display: flex; align-items: center; justify-content: space-between; border-top: 1px dashed #e2e8f0; padding-top: 0.75rem; flex-wrap: wrap; gap: 0.5rem;">
+                <span style="font-size: 0.8125rem; color: #047857; font-weight: 600;">
+                  ★ You rated Bilal 5 Stars: "Quick work, brought genuine washers and solved the drip."
+                </span>
+                <a href="#modal-book-bilal" class="btn btn-outline btn-sm">Book Again</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Customer Reviews Section -->
+      <section class="section-wrapper" id="reviews">
+        <div class="site-container">
+          <div class="section-head">
+            <div>
+              <h2 class="section-title">Verified Customer Reviews</h2>
+              <p class="section-desc">Read honest feedback from verified homeowners across Karachi.</p>
+            </div>
+            <a href="#modal-review" class="btn btn-teal btn-sm">Write a Review</a>
+          </div>
+
+          <div class="testimonials-grid">
+            <div class="card-hoverable testimonial-card">
+              <div>
+                <div style="color: #f59e0b; margin-bottom: 0.5rem;">★★★★★</div>
+                <p class="testimonial-text">
+                  "Ahmed arrived within 40 minutes in DHA Phase 6. Solved our recurring breaker trip fault that three previous electricians failed to diagnose. Highly professional!"
+                </p>
+              </div>
+              <div class="testimonial-author">
+                <div class="author-avatar">
+                  <img
+                    src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=150&h=150&crop=faces&q=80"
+                    alt="Sara Ahmed"
+                    class="author-avatar-img"
+                  />
+                </div>
+                <div class="author-info">
+                  <span class="author-name">Sara Ahmed</span>
+                  <span class="author-location">DHA Karachi • Hired Electrician</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="card-hoverable testimonial-card">
+              <div>
+                <div style="color: #f59e0b; margin-bottom: 0.5rem;">★★★★★</div>
+                <p class="testimonial-text">
+                  "Zara did an exceptional job servicing two inverter AC units in PECHS. Checked the gas pressure honestly and saved us from unnecessary refilling costs."
+                </p>
+              </div>
+              <div class="testimonial-author">
+                <div class="author-avatar" style="background-color: #fde68a; color: #92400e;">
+                  <img
+                    src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=150&h=150&crop=faces&q=80"
+                    alt="Tariq Mehmood"
+                    class="author-avatar-img"
+                  />
+                </div>
+                <div class="author-info">
+                  <span class="author-name">Tariq Mehmood</span>
+                  <span class="author-location">PECHS Karachi • Hired AC Tech</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="card-hoverable testimonial-card">
+              <div>
+                <div style="color: #f59e0b; margin-bottom: 0.5rem;">★★★★★</div>
+                <p class="testimonial-text">
+                  "Bilal was courteous and fixed the main geyser pipe leak cleanly without damaging our tiles. Booking through Ustaad was seamless and transparent."
+                </p>
+              </div>
+              <div class="testimonial-author">
+                <div class="author-avatar" style="background-color: #ccfbf1; color: #0f766e;">
+                  <img
+                    src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=150&h=150&crop=faces&q=80"
+                    alt="Maria Naveed"
+                    class="author-avatar-img"
+                  />
+                </div>
+                <div class="author-info">
+                  <span class="author-name">Maria Naveed</span>
+                  <span class="author-location">Gulshan-e-Iqbal • Hired Plumber</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FAQ Section (Pure CSS <details>) -->
+      <section class="section-wrapper" id="faq" style="background-color: #f1f5f9; padding: 4rem 0;">
+        <div class="site-container">
+          <div class="section-head" style="text-align: center; justify-content: center; flex-direction: column;">
+            <h2 class="section-title">Frequently Asked Questions</h2>
+            <p class="section-desc">Clear answers regarding rates, guarantees, and booking security.</p>
+          </div>
+
+          <div class="faq-container">
+            <details class="faq-item" open>
+              <summary>How are Ustaad service professionals verified?</summary>
+              <div class="faq-content">
+                Every service professional must submit a verified CNIC, proof of trade certification/experience, and undergo reference checks before receiving customer bookings on Ustaad.
+              </div>
+            </details>
+
+            <details class="faq-item">
+              <summary>What if I am not satisfied with the repair work?</summary>
+              <div class="faq-content">
+                We offer a 7-day re-service guarantee. If any issue persists from the original repair, the technician will revisit and resolve it at no extra service charge.
+              </div>
+            </details>
+
+            <details class="faq-item">
+              <summary>Are prices fixed or do they change on arrival?</summary>
+              <div class="faq-content">
+                Visit and inspection charges are 100% fixed as displayed on each provider's card. If spare parts are required, the ustaad provides a transparent bill before purchasing.
+              </div>
+            </details>
+
+            <details class="faq-item">
+              <summary>How quickly can a technician arrive at my home?</summary>
+              <div class="faq-content">
+                For emergency electrical or plumbing requests, available ustaads in your sector can arrive within 30 to 60 minutes. You can also schedule advance bookings for any future date.
+              </div>
+            </details>
+
+            <details class="faq-item">
+              <summary>How do I pay for the service?</summary>
+              <div class="faq-content">
+                You only pay after the job is completely tested and finished. Payment can be made in direct cash to the technician or via mobile banking (Raast / EasyPaisa / JazzCash).
+              </div>
+            </details>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+      <div class="site-container">
+        <div class="footer-grid">
+          <div>
+            <a href="#top" class="brand-logo" style="margin-bottom: 0.5rem;">
+              <div class="brand-icon">U</div>
+              <div class="brand-title">
+                Ustaad
+                <span class="brand-tagline">Verified Local Pros</span>
+              </div>
+            </a>
+            <p class="footer-brand-desc">
+              Karachi's trusted local service directory. Connecting homeowners and businesses with verified, background-checked trade specialists.
+            </p>
+            <div style="margin-top: 1rem;">
+              <a href="#modal-book-general" class="btn btn-amber btn-sm">Book Doorstep Service</a>
+            </div>
+          </div>
+
+          <div>
+            <div class="footer-col-title">Popular Trades</div>
+            <ul class="footer-links-list">
+              <li><a href="#cat-electrician" class="footer-link">Electrician Call-Out</a></li>
+              <li><a href="#cat-plumber" class="footer-link">Plumber & Geyser Fix</a></li>
+              <li><a href="#cat-ac" class="footer-link">Inverter AC Servicing</a></li>
+              <li><a href="#cat-cleaning" class="footer-link">Deep House Cleaning</a></li>
+              <li><a href="#cat-painter" class="footer-link">Wall Painting & Dampness</a></li>
+              <li><a href="#cat-carpenter" class="footer-link">Locksmith & Carpentry</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <div class="footer-col-title">Coverage Areas</div>
+            <ul class="footer-links-list">
+              <li><a href="#providers" class="footer-link">DHA Karachi (Phases 1-8)</a></li>
+              <li><a href="#providers" class="footer-link">Clifton & Sea View</a></li>
+              <li><a href="#providers" class="footer-link">Gulshan-e-Iqbal & Johar</a></li>
+              <li><a href="#providers" class="footer-link">PECHS & Bahadurabad</a></li>
+              <li><a href="#providers" class="footer-link">North Nazimabad & F.B Area</a></li>
+              <li><a href="#providers" class="footer-link">Malir Cantt & Airport</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <div class="footer-col-title">Support & Trust</div>
+            <ul class="footer-links-list">
+              <li><a href="#faq" class="footer-link">Help Center & FAQ</a></li>
+              <li><a href="#how-it-works" class="footer-link">7-Day Service Guarantee</a></li>
+              <li><a href="#reviews" class="footer-link">Customer Ratings</a></li>
+              <li><a href="#modal-login" class="footer-link">Provider Portal</a></li>
+              <li><a href="#modal-register" class="footer-link">Register as Technician</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <div class="footer-copyright">
+            © 2026 Ustaad Local Services. All rights reserved.
+          </div>
+          <div class="footer-badges">
+            <span class="badge-tag">🔒 100% Secure</span>
+            <span class="badge-tag">⚡ Fast Dispatch</span>
+            <span class="badge-tag">🛡️ Verified Backgrounds</span>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Pure CSS Modals (:target) -->
+    <!-- Booking Modal -->
+    <div class="modal-overlay" id="modal-book-general">
+      <div class="modal-dialog">
+        <div class="modal-header">
+          <h3 style="margin: 0; font-size: 1.25rem;">Book a Verified Ustaad</h3>
+          <a href="#close" class="modal-close-btn" title="Close Modal">✕</a>
+        </div>
+        <div class="modal-body">
+          <form action="#modal-success" method="get">
+            <div class="form-group">
+              <label class="form-label">Service Type</label>
+              <select class="form-control" required>
+                <option value="electrician">⚡ Electrician (Rs 800 visit)</option>
+                <option value="plumber">🔧 Plumber & Geyser (Rs 700 visit)</option>
+                <option value="ac">❄️ AC Technician (Rs 1,200/unit)</option>
+                <option value="cleaning">✨ House Cleaning (Rs 1,500 session)</option>
+                <option value="painter">🎨 Painter (Rs 2,000/day)</option>
+                <option value="carpenter">🪚 Carpenter (Rs 1,000 visit)</option>
+              </select>
+            </div>
+
+            <div class="form-grid-2">
+              <div class="form-group">
+                <label class="form-label">Date</label>
+                <input type="date" class="form-control" value="2026-08-30" required />
+              </div>
+              <div class="form-group">
+                <label class="form-label">Time Slot</label>
+                <select class="form-control" required>
+                  <option>Morning (09:00 AM - 12:00 PM)</option>
+                  <option selected>Afternoon (01:00 PM - 04:00 PM)</option>
+                  <option>Evening (05:00 PM - 08:00 PM)</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">Your Name</label>
+              <input type="text" class="form-control" placeholder="Enter your full name" required />
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">Contact Number</label>
+              <input type="tel" class="form-control" placeholder="e.g. 0300-1234567" required />
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">Doorstep Address</label>
+              <input type="text" class="form-control" placeholder="House / Flat #, Street, Area, Karachi" required />
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">Describe the Job</label>
+              <textarea class="form-control" rows="3" placeholder="Briefly describe what needs fixing..." required></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-amber btn-full btn-lg" style="margin-top: 0.5rem;">
+              Confirm Booking Request
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- Ahmed Booking Modal -->
+    <div class="modal-overlay" id="modal-book-ahmed">
+      <div class="modal-dialog">
+        <div class="modal-header">
+          <div>
+            <h3 style="margin: 0; font-size: 1.25rem;">Book Ahmed Raza</h3>
+            <span style="font-size: 0.8125rem; color: #0d9488; font-weight: 600;">⚡ Electrician • Rs 800 visit charge</span>
+          </div>
+          <a href="#close" class="modal-close-btn" title="Close">✕</a>
+        </div>
+        <div class="modal-body">
+          <form action="#modal-success" method="get">
+            <div class="form-grid-2">
+              <div class="form-group">
+                <label class="form-label">Service Date</label>
+                <input type="date" class="form-control" value="2026-08-30" required />
+              </div>
+              <div class="form-group">
+                <label class="form-label">Preferred Time</label>
+                <select class="form-control" required>
+                  <option selected>03:00 PM - 05:00 PM</option>
+                  <option>05:00 PM - 07:00 PM</option>
+                  <option>Tomorrow Morning</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">Customer Name</label>
+              <input type="text" class="form-control" placeholder="Your full name" required />
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">Phone Number</label>
+              <input type="tel" class="form-control" placeholder="03XX-XXXXXXX" required />
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">Service Address</label>
+              <input type="text" class="form-control" placeholder="Enter complete address" required />
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">Electrical Issue Details</label>
+              <textarea class="form-control" rows="3" placeholder="e.g., Short circuit in living room, breaker tripping, socket repair..." required></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-full btn-lg">
+              Send Request to Ahmed Raza
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bilal Booking Modal -->
+    <div class="modal-overlay" id="modal-book-bilal">
+      <div class="modal-dialog">
+        <div class="modal-header">
+          <div>
+            <h3 style="margin: 0; font-size: 1.25rem;">Book Bilal Khan</h3>
+            <span style="font-size: 0.8125rem; color: #047857; font-weight: 600;">🔧 Plumber • Rs 700 visit charge</span>
+          </div>
+          <a href="#close" class="modal-close-btn" title="Close">✕</a>
+        </div>
+        <div class="modal-body">
+          <form action="#modal-success" method="get">
+            <div class="form-grid-2">
+              <div class="form-group">
+                <label class="form-label">Date</label>
+                <input type="date" class="form-control" value="2026-08-30" required />
+              </div>
+              <div class="form-group">
+                <label class="form-label">Time</label>
+                <select class="form-control" required>
+                  <option selected>Immediate (Within 1 hour)</option>
+                  <option>Afternoon 02:00 PM</option>
+                  <option>Evening 06:00 PM</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">Contact Name & Phone</label>
+              <input type="text" class="form-control" placeholder="Name & Mobile Number" required />
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">Address in Karachi</label>
+              <input type="text" class="form-control" placeholder="Gulshan / Johar / Surrounding" required />
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">Plumbing Issue</label>
+              <textarea class="form-control" rows="3" placeholder="e.g., Geyser valve leaking, kitchen mixer replacement..." required></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-teal btn-full btn-lg">
+              Send Request to Bilal Khan
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- Zara Booking Modal -->
+    <div class="modal-overlay" id="modal-book-zara">
+      <div class="modal-dialog">
+        <div class="modal-header">
+          <div>
+            <h3 style="margin: 0; font-size: 1.25rem;">Book Zara Sheikh</h3>
+            <span style="font-size: 0.8125rem; color: #0284c7; font-weight: 600;">❄️ AC Technician • Rs 1,200 per unit</span>
+          </div>
+          <a href="#close" class="modal-close-btn" title="Close">✕</a>
+        </div>
+        <div class="modal-body">
+          <form action="#modal-success" method="get">
+            <div class="form-group">
+              <label class="form-label">AC Units to Service</label>
+              <select class="form-control" required>
+                <option>1 Split Inverter Unit</option>
+                <option>2 Split Inverter Units</option>
+                <option>3+ Units (Full House Servicing)</option>
+                <option>Gas Refill / Leakage Check</option>
+              </select>
+            </div>
+
+            <div class="form-grid-2">
+              <div class="form-group">
+                <label class="form-label">Date</label>
+                <input type="date" class="form-control" value="2026-08-30" required />
+              </div>
+              <div class="form-group">
+                <label class="form-label">Time</label>
+                <select class="form-control" required>
+                  <option selected>Morning 10:00 AM</option>
+                  <option>Afternoon 02:00 PM</option>
+                  <option>Evening 05:00 PM</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">Address (PECHS / Bahadurabad / Nearby)</label>
+              <input type="text" class="form-control" placeholder="House / Flat # and Street" required />
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-full btn-lg">
+              Confirm AC Service Request
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- Ahmed Profile Modal -->
+    <div class="modal-overlay" id="modal-profile-ahmed">
+      <div class="modal-dialog">
+        <div class="modal-header">
+          <div style="display: flex; align-items: center; gap: 0.75rem;">
+            <div class="provider-avatar-badge" style="width: 44px; height: 44px; font-size: 1rem;">
+              <img
+                src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=200&h=200&crop=faces&q=80"
+                alt="Ahmed Raza"
+                class="provider-avatar-img"
+              />
+            </div>
+            <div>
+              <h3 style="margin: 0; font-size: 1.15rem;">Ahmed Raza</h3>
+              <span style="font-size: 0.75rem; color: #0d9488; font-weight: 700;">Verified Master Electrician</span>
+            </div>
+          </div>
+          <a href="#close" class="modal-close-btn" title="Close">✕</a>
+        </div>
+        <div class="modal-body">
+          <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.75rem; margin-bottom: 1.25rem;">
+            <div style="background: #f8fafc; padding: 0.75rem; border-radius: 8px; text-align: center; border: 1px solid #e2e8f0;">
+              <div style="font-weight: 800; color: #0f172a; font-size: 1.1rem;">6 Yrs</div>
+              <div style="font-size: 0.6875rem; color: #64748b;">Experience</div>
+            </div>
+            <div style="background: #f8fafc; padding: 0.75rem; border-radius: 8px; text-align: center; border: 1px solid #e2e8f0;">
+              <div style="font-weight: 800; color: #0f172a; font-size: 1.1rem;">Rs 800</div>
+              <div style="font-size: 0.6875rem; color: #64748b;">Visit Charge</div>
+            </div>
+            <div style="background: #f8fafc; padding: 0.75rem; border-radius: 8px; text-align: center; border: 1px solid #e2e8f0;">
+              <div style="font-weight: 800; color: #0f172a; font-size: 1.1rem;">4.8 ★</div>
+              <div style="font-size: 0.6875rem; color: #64748b;">23 Reviews</div>
+            </div>
+          </div>
+
+          <h4 style="font-size: 0.875rem; margin-bottom: 0.35rem;">Specializations</h4>
+          <p style="font-size: 0.875rem; color: #64748b; line-height: 1.5; margin-bottom: 1rem;">
+            • Short circuit diagnosis and thermal testing<br/>
+            • Distribution box / Breaker replacement<br/>
+            • Generator changover switches and UPS wiring<br/>
+            • Concealed wall LED wiring & smart home switches
+          </p>
+
+          <div style="display: flex; gap: 0.75rem;">
+            <a href="#modal-book-ahmed" class="btn btn-primary btn-full">Book Ahmed Raza</a>
+            <a href="#close" class="btn btn-outline">Close</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Review Modal -->
+    <div class="modal-overlay" id="modal-review">
+      <div class="modal-dialog">
+        <div class="modal-header">
+          <h3 style="margin: 0; font-size: 1.25rem;">Write a Service Review</h3>
+          <a href="#close" class="modal-close-btn" title="Close">✕</a>
+        </div>
+        <div class="modal-body">
+          <form action="#modal-success" method="get">
+            <div class="form-group">
+              <label class="form-label">Select Booking / Technician</label>
+              <select class="form-control" required>
+                <option>Ahmed Raza (Electrician - BK-78921)</option>
+                <option>Bilal Khan (Plumber - BK-45102)</option>
+                <option>Zara Sheikh (AC Technician)</option>
+                <option>Other Provider</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">Rating</label>
+              <select class="form-control" required>
+                <option value="5">★★★★★ 5 Stars (Excellent Service)</option>
+                <option value="4">★★★★☆ 4 Stars (Very Good)</option>
+                <option value="3">★★★☆☆ 3 Stars (Satisfactory)</option>
+                <option value="2">★★☆☆☆ 2 Stars (Needs Improvement)</option>
+                <option value="1">★☆☆☆☆ 1 Star (Poor)</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">Your Review & Feedback</label>
+              <textarea class="form-control" rows="4" placeholder="How was the technician's punctuality, pricing, and quality of repair?" required></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-teal btn-full btn-lg">
+              Submit Review
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- Login Modal -->
+    <div class="modal-overlay" id="modal-login">
+      <div class="modal-dialog">
+        <div class="modal-header">
+          <div>
+            <h3 style="margin: 0; font-size: 1.25rem;">Welcome to Ustaad</h3>
+            <span style="font-size: 0.8125rem; color: #64748b;">Sign in to view your bookings and saved providers</span>
+          </div>
+          <a href="#close" class="modal-close-btn" title="Close">✕</a>
+        </div>
+        <div class="modal-body">
+          <form action="#dashboard" method="get">
+            <div class="form-group">
+              <label class="form-label">Email Address</label>
+              <input type="email" class="form-control" placeholder="name@example.com" value="sara.customer@demo.com" required />
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">Password</label>
+              <input type="password" class="form-control" placeholder="••••••••" value="demo123" required />
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-full btn-lg" style="margin-top: 0.5rem;">
+              Sign In to Account
+            </button>
+
+            <div style="text-align: center; margin-top: 1.25rem; font-size: 0.875rem; color: #64748b;">
+              Don't have an account? <a href="#modal-register" style="color: #0d9488; font-weight: 700; text-decoration: none;">Register here</a>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- Register Modal -->
+    <div class="modal-overlay" id="modal-register">
+      <div class="modal-dialog">
+        <div class="modal-header">
+          <div>
+            <h3 style="margin: 0; font-size: 1.25rem;">Create an Account</h3>
+            <span style="font-size: 0.8125rem; color: #64748b;">Join as a customer or register as a service technician</span>
+          </div>
+          <a href="#close" class="modal-close-btn" title="Close">✕</a>
+        </div>
+        <div class="modal-body">
+          <form action="#dashboard" method="get">
+            <div class="form-group">
+              <label class="form-label">Account Type</label>
+              <select class="form-control">
+                <option value="customer">I am a Customer (Book Services)</option>
+                <option value="provider">I am an Ustaad (Offer Services)</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">Full Name</label>
+              <input type="text" class="form-control" placeholder="Enter your full name" required />
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">Phone Number (Karachi)</label>
+              <input type="tel" class="form-control" placeholder="03XX-XXXXXXX" required />
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">Email Address</label>
+              <input type="email" class="form-control" placeholder="name@example.com" required />
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">Create Password</label>
+              <input type="password" class="form-control" placeholder="At least 6 characters" required />
+            </div>
+
+            <button type="submit" class="btn btn-amber btn-full btn-lg" style="margin-top: 0.5rem;">
+              Create Free Account
+            </button>
+
+            <div style="text-align: center; margin-top: 1.25rem; font-size: 0.875rem; color: #64748b;">
+              Already registered? <a href="#modal-login" style="color: #0d9488; font-weight: 700; text-decoration: none;">Sign In</a>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- Success Confirmation Modal -->
+    <div class="modal-overlay" id="modal-success">
+      <div class="modal-dialog" style="text-align: center; padding: 1.5rem;">
+        <div style="width: 56px; height: 56px; border-radius: 50%; background: #ecfdf5; color: #047857; font-size: 1.75rem; display: inline-flex; align-items: center; justify-content: center; margin-bottom: 1rem; border: 1px solid #a7f3d0;">
+          ✓
+        </div>
+        <h3 style="font-size: 1.5rem; color: #0f172a; margin-bottom: 0.5rem;">Booking Request Sent!</h3>
+        <p style="color: #64748b; font-size: 0.9375rem; margin-bottom: 1.5rem;">
+          Your digital ticket has been generated. The verified technician has been notified and will call you shortly to confirm doorstep arrival.
+        </p>
+        <div style="display: flex; gap: 0.75rem; justify-content: center;">
+          <a href="#dashboard" class="btn btn-primary">View in My Bookings</a>
+          <a href="#top" class="btn btn-outline">Back to Home</a>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
